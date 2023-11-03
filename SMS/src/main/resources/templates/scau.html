@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>原来你也玩原神</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body onclick="redirectToNextPage()">
+    <img th:src="@{/images/scau.jpg}" alt="">
+    <script>
+        function redirectToNextPage() {
+            var newURL = "login";
+            history.pushState(null, " ", newURL)
+            location.reload(true)
+        }
+    </script>
+</body>
+
+</html>
