@@ -138,11 +138,11 @@
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </span>
             <span th:if="${session.USER.type==0}">
-                <label for="classNO">班级</label>
+                <label for="classNO">学生</label>
                 <span class="select-box inline">
                     <select id="classNO" class="select">
                         <option selected th:value="${session.USER.classNO}"
-                            th:text="${session.USER.classNO+session.USER.contrastStudentName}">全部分类</option>
+                            th:text="${session.USER.contrastStudentName}">全部分类</option>
                     </select>
                 </span>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -153,7 +153,7 @@
                 <span class="select-box inline">
                     <select id="teacherID" class="select">
                         <option checked th:value="${session.USER.contrastTeacherID}"
-                            th:text="${session.USER.contrastTeacherID+session.USER.contrastTeacherName}">全部分类</option>
+                            th:text="${session.USER.contrastTeacherName}">全部分类</option>
                     </select>
                 </span>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>

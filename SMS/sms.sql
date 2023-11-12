@@ -11,9 +11,11 @@
  Target Server Version : 80035
  File Encoding         : 65001
 
- Date: 03/11/2023 02:29:20
+ Date: 03/11/2023 15:57:48
 */
 
+CREATE DATABASE sms;
+use sms;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -23,7 +25,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `class`;
 CREATE TABLE `class`  (
   `classNO` bigint NOT NULL AUTO_INCREMENT,
-  `year` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL,
+  `year` varchar(50) CHARACTER  SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL,
   `facultyNO` bigint NULL DEFAULT NULL,
   `major` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL,
   `classSize` int NULL DEFAULT NULL,
@@ -228,8 +230,8 @@ CREATE TABLE `curriculum`  (
 INSERT INTO `curriculum` VALUES (1, 6, 4, 30002700, '2022-2023', 0, 7, 14, 1, 1, 7, 420);
 INSERT INTO `curriculum` VALUES (2, 4, 4, 30002699, '2022-2023', 0, 4, 17, 1, 2, 3, 504);
 INSERT INTO `curriculum` VALUES (3, 4, 4, 30002699, '2022-2023', 0, 4, 17, 3, 1, 3, 606);
-INSERT INTO `curriculum` VALUES (4, 5, 4, 30002699, '2022-2023', 0, 4, 17, 1, 4, 4, 108);
-INSERT INTO `curriculum` VALUES (5, 5, 4, 30002699, '2022-2023', 0, 4, 17, 2, 4, 3, 601);
+INSERT INTO `curriculum` VALUES (4, 5, 4, 30002700, '2022-2023', 0, 4, 17, 1, 4, 4, 108);
+INSERT INTO `curriculum` VALUES (5, 5, 4, 30002700, '2022-2023', 0, 4, 17, 2, 4, 3, 601);
 INSERT INTO `curriculum` VALUES (6, 7, 4, 30002701, '2022-2023', 0, 4, 17, 1, 5, 3, 503);
 INSERT INTO `curriculum` VALUES (7, 7, 4, 30002701, '2022-2023', 0, 4, 17, 2, 1, 3, 506);
 INSERT INTO `curriculum` VALUES (8, 11, 4, 30002702, '2022-2023', 0, 4, 17, 2, 2, 3, 604);
@@ -427,7 +429,6 @@ INSERT INTO `student` VALUES ('202225310127', '张宇森', 2022, 20, 4, '广东�
 INSERT INTO `student` VALUES ('202225310128', '张子锐', 2022, 20, 4, '广东省广州市', '18888888888', NULL, 1);
 INSERT INTO `student` VALUES ('202225310129', '周铨浩', 2022, 20, 4, '广东省广州市', '18888888888', NULL, 1);
 INSERT INTO `student` VALUES ('202225310130', '庄小静', 2022, 20, 4, '广东省广州市', '18888888888', NULL, 0);
-INSERT INTO `student` VALUES ('22222222', 'hhh,', 2022, 20, 4, NULL, '11111111111', '', 1);
 
 -- ----------------------------
 -- Table structure for teacher
@@ -521,7 +522,7 @@ INSERT INTO `user` VALUES (32, '202225310130', '202225310130', 0, 0, '2022253101
 INSERT INTO `user` VALUES (33, '100000111', '100000111', 0, 0, '100000111', NULL);
 INSERT INTO `user` VALUES (34, '100000222', '100000222', 0, 0, '100000222', NULL);
 INSERT INTO `user` VALUES (35, '100000333', '100000333', 0, 0, '100000333', NULL);
-INSERT INTO `user` VALUES (36, 'hacker', 'hacker', 2, 1, NULL, NULL);
+INSERT INTO `user` VALUES (36, 'hacker', 'hacker', 2, 0, NULL, NULL);
 INSERT INTO `user` VALUES (37, 'admin', 'admin', 2, 0, NULL, NULL);
 INSERT INTO `user` VALUES (38, '30002692', '30002692', 1, 0, NULL, 30002692);
 INSERT INTO `user` VALUES (39, '30002693', '30002693', 1, 0, NULL, 30002693);

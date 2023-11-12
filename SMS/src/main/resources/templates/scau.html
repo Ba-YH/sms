@@ -26,6 +26,9 @@
             history.pushState(null, " ", newURL)
             location.reload(true)
         }
+        document.addEventListener("keydown", function (event) {
+            redirectToNextPage();
+        });
     </script>
 </body>
 

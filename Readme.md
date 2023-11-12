@@ -1,4 +1,4 @@
-# 基于Java的教务管理系统、学生管理系统、课表查询系统  (Spring、SpringBoot、thymeleaf)
+## 基于SSM的学生管理系统
 
 - 基于Spring的教务管理系统、学生管理系统、课表查询系统  ，包含数据库文件
 
@@ -20,79 +20,44 @@
 
   
 
-  ![1652330542964](Readme.assets/1652330542964.png) 
+  ![1652330542964](readme.images/思维导图.png) 
 
   
 
-  ![1652330565045](Readme.assets/1652330565045.png)![1652330581731](Readme.assets/1652330581731.png)
+  ![1652330565045](readme.images/用户登录.png)![1652330581731](readme.images/用户名或密码错误.png)
 
-  ![1652330589467](Readme.assets/1652330589467.png)![1652330603075](Readme.assets/1652330603075.png)
+  ![1652330589467](readme.images/管理员用户首页.png)![1652330603075](readme.images/教室列表.png)
 
-  ![1652330607763](Readme.assets/1652330607763.png) 
+  ![1652330607763](readme.images/添加教室.png) 
 
-  ![1652330612295](Readme.assets/1652330612295.png) 
+  ![1652330612295](readme.images/教室编辑.png) 
 
-  ![1652330616130](Readme.assets/1652330616130.png) 
+  ![1652330616130](readme.images/删除.png) 
 
-  ![1652330621640](Readme.assets/1652330621640.png)![1652330627860](Readme.assets/1652330627860.png)
+  ![1652330621640](readme.images/批量删除.png)![1652330627860](readme.images/检索.png)
 
-  ![1652330638907](Readme.assets/1652330638907.png) 
+  ![1652330638907](readme.images/课堂列表.png) 
 
-  ![1652330643420](Readme.assets/1652330643420.png) 
+  ![1652330643420](readme.images/添加课程表.png) 
 
-  ![1652330647714](Readme.assets/1652330647714.png) 
+  ![1652330647714](readme.images/必填字段.png)  
 
-  ![1652330651946](Readme.assets/1652330651946.png) 
+  ![1652330655752](readme.images/用户列表.png) 
 
-  ![1652330655752](Readme.assets/1652330655752.png) 
+  ![1652330660007](readme.images/停用用户.png) 
 
-  ![1652330660007](Readme.assets/1652330660007.png) 
+   ![1652330664455](readme.images/修改学生用户.png)
 
-   ![1652330664455](Readme.assets/1652330664455.png)
+  ![1652330669111](readme.images/课程表.png) 
 
-  ![1652330669111](Readme.assets/1652330669111.png) 
+  ![1652330677831](readme.images/课程表2.png) 
 
-  ![1652330677831](Readme.assets/1652330677831.png) 
   
-  
-
-#  使用的第三方库  
-
-- 1. spring-boot
-
-  2. spring-MVC
-
-  3. thymeleaf
-
-  4. mybatis-plus
-
-  5. druid
-
-  6. Lombok
-
-  7. Hutool
-
-  8. H-ui
-
-  9. Timetables.js
 
 # 使用说明
 
-- SMS目录下的数据库文件sms.sql导入MySQL数据库，运行程序即可
-- 后台登录界面为 admin.aspx ，默认账号：admin 密码：admin
+- SMS目录下的数据库文件sms.sql生成MySQL数据库，运行程序即可
+- IDEA配置maven，连接数据库
+- 后台登录界面为 http://localhost/scau ，默认管理员账号：admin 密码：admin
 
 
-
-## 更改
-1. 更改entity.Student和 user中学号的类型
-2. 更改StudentController update方法形参属性
-3. 更改学生信息展示列表的宽度（学号调长，性别地址调短）/user/admin-list & /admin-list-public
-4. 删除学生端编辑的学号和备注框，(学号不得更改，备注是管理员添加) /student/admin-update
-5. login.html更改版权信息，更改标题为登录，更改验证码常驻显示问题（但是缺少验证码提示）
-6. 更改学生端与教师端用户右上角的显示信息，不显示账户名，管理员端只显示账户名
-7. 没有注册，所有学生老师初始账户密码为编号，只有超级管理员可新增用户
-
-## Bug
-1. 登录页面的验证码提示
-2. Session会话不安全，自动跳转登录，跳过了验证码验证
-3. 退回登录页面，验证码不自动刷新

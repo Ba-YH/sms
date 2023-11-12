@@ -74,17 +74,15 @@
                     </span>
                 </div>
             </div>
-
             <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-3">年级：</label>
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>年级：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     <input type="text" class="input-text" th:value="${student.grade}" placeholder="" id="grade"
                         name="grade">
                 </div>
             </div>
 
-            
-            <!-- 
+
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-3">
                     <span class="c-red">*</span>班级编号：</label>
@@ -96,28 +94,30 @@
                         </select>
                     </span>
                 </div>
-            </div> -->
+            </div>
+
+            
 
 
+
+            <!-- 添加专业 -->
             <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学年：</label>
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>专业：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     <span class="select-box">
                         <select name="major" class="select valid" aria-required="true" aria-invalid="false">
+                            <option th:value="${student.major}">计算机科学与工程</option>
+                            <option th:value="${student.major}">软件工程</option>
+                            <option th:value="${student.major}">大数据技术与管理</option>
                             <option th:value="${student.major}">原神元素科学</option>
                             <option th:value="${student.major}">原神文字学(丘丘语方向)</option>
                             <option th:value="${student.major}">原神文字学(古文字方向)</option>
-                            <option th:value="${student.major}">计算机科学与技术</option>
-                            <option th:value="${student.major}">软件工程</option>
-                            <option th:value="${student.major}">大数据科学与技术</option>
                         </select>
                     </span>
                 </div>
             </div>
 
 
-
-            
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
                 <div class="formControls col-xs-8 col-sm-9">
@@ -166,6 +166,8 @@
             rules: {
                 name: {
                     required: true,
+                    minlength: 1,
+                    maxlength: 16
                 }, sex: {
                     required: true,
                 }, grade: {

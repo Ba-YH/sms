@@ -20,8 +20,7 @@ public class AdminInterceptor implements HandlerInterceptor  {
             if(user!=null){
                 return true;
             }
-                response.sendRedirect(request.getContextPath()+"/login");
-//            response.sendRedirect(request.getContextPath()+"/scau");
+            response.sendRedirect(request.getContextPath()+"/scau");
         return false;//如果设置为false时，被请求时，拦截器执行到此处将不会继续操作
         //如果设置为true时，请求将会继续执行后面的操作
     }
